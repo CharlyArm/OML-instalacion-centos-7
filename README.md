@@ -655,3 +655,11 @@ fi
 
 reboot
 ```
+
+## Paso 16: Otorga permisos de ejecución al archivo
+
+Esto permitirá que el archivo sea ejecutable y puedas proceder con su ejecución:
+
+```bash
+chmod +x first_boot_installer.sh
+```
