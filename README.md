@@ -13,3 +13,16 @@ Este es un manual de instalación paso a paso para configurar OmniLeads en un se
 ```bash
 yum update
 yum upgrade
+
+Paso 2: Instalar Dependencias
+
+yum install nano net-tools wget epel-release
+
+Paso 3: Desactivar SELinux y el Firewall
+
+setenforce 0
+sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/sysconfig/selinux
+sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
+systemctl disable firewalld
+
+
