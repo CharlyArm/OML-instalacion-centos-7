@@ -33,3 +33,11 @@ sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/sysconfig/selinux
 sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
 systemctl disable firewalld
 ```
+
+## Paso 4: Actualizar el Kernel y Git
+
+Asegúrate de que tu sistema tenga el kernel y Git actualizados para continuar con la instalación:
+
+```bash
+yum update -y && yum install kernel-devel git -y
+```
