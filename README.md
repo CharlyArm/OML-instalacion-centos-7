@@ -50,3 +50,12 @@ Instala Python 3 y pip3 en tu sistema:
 yum install epel-release -y && yum install python3-pip python3 -y
 pip3 install --upgrade pip
 ```
+
+## Paso 6: Instalar Ansible
+
+Instala Ansible en tu sistema con el siguiente comando:
+
+```bash
+pip3 install setuptools_rust
+pip3 install 'ansible==2.9.2' --user
+```
