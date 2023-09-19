@@ -1,4 +1,4 @@
-# Manual de Instalación de MySIT Callcenter Solution - OML
+# Manual de Instalación de OmniLeads
 
 Este es un manual de instalación paso a paso para configurar OmniLeads en un servidor Linux. Asegúrate de seguir cuidadosamente cada uno de los pasos a continuación.
 
@@ -105,3 +105,12 @@ Instala el completado automático de Bash con los siguientes comandos:
 ```bash
 yum install bash-completion bash-completion-extras -y
 ```
+
+## Paso 11: Clonar el Repositorio de OmniLeads
+
+Clona el repositorio de OmniLeads desde GitLab utilizando el siguiente comando:
+
+```bash
+git clone https://gitlab.com/omnileads/ominicontacto.git
+```
+
