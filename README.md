@@ -16,3 +16,9 @@ yum upgrade
 ```
 
 ## Paso 2: Instalar Dependencias
+
+Instala las dependencias necesarias con el siguiente comando:
+
+```bash
+yum install nano net-tools wget epel-release
+```
