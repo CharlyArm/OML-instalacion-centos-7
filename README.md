@@ -1,4 +1,4 @@
-# Manual de Instalación de OmniLeads
+# Manual de Instalación de MySIT Callcenter Solution - OML
 
 Este es un manual de instalación paso a paso para configurar OmniLeads en un servidor Linux. Asegúrate de seguir cuidadosamente cada uno de los pasos a continuación.
 
