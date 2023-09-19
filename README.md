@@ -22,3 +22,14 @@ Instala las dependencias necesarias con el siguiente comando:
 ```bash
 yum install nano net-tools wget epel-release
 ```
+
+## Paso 3: Desactivar SELinux y el Firewall
+
+Desactiva SELinux temporalmente y el firewall con los siguientes comandos:
+
+```bash
+setenforce 0
+sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/sysconfig/selinux
+sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
+systemctl disable firewalld
+```
