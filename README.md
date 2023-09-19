@@ -1,4 +1,4 @@
-# Manual de Instalación de MySIT Call Center Solution - OML 
+# Manual de Instalación de MySIT Call Center Solution - OML
 
 Este es un manual de instalación paso a paso para configurar OmniLeads en un servidor Linux. Asegúrate de seguir cuidadosamente cada uno de los pasos a continuación.
 
@@ -114,3 +114,21 @@ Clona el repositorio de OmniLeads desde GitLab utilizando el siguiente comando:
 git clone https://gitlab.com/omnileads/ominicontacto.git
 ```
 
+## Paso 12: Navegar al Directorio de OmniLeads
+
+Accede al directorio donde se encuentra el código fuente de OmniLeads. Utiliza el siguiente comando para navegar al directorio `ominicontacto`:
+
+```bash
+cd ominicontacto/
+```
+
+## Paso 13: Actualizar el Código Fuente
+
+Actualiza el código fuente de OmniLeads a la versión específica con los siguientes comandos:
+
+```bash
+git fetch
+git checkout release-1.30.0
+git submodule init
+git submodule update --remote
+```
