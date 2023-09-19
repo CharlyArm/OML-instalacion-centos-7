@@ -41,3 +41,12 @@ Asegúrate de que tu sistema tenga el kernel y Git actualizados para continuar c
 ```bash
 yum update -y && yum install kernel-devel git -y
 ```
+
+## Paso 5: Instalar Python y pip
+
+Instala Python 3 y pip3 en tu sistema:
+
+```bash
+yum install epel-release -y && yum install python3-pip python3 -y
+pip3 install --upgrade pip
+```
