@@ -663,3 +663,11 @@ Esto permitirá que el archivo sea ejecutable y puedas proceder con su ejecució
 ```bash
 chmod +x first_boot_installer.sh
 ```
+
+## Paso 17: Ejecuta el instalador del primer arranque
+
+Ejecuta el script del primer arranque para comenzar la instalación:
+
+```bash
+./first_boot_installer.sh
+```
