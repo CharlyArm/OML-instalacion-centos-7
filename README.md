@@ -132,3 +132,11 @@ git checkout release-1.30.0
 git submodule init
 git submodule update --remote
 ```
+
+## Paso 14: Acceder a las Configuraciones de Implementación
+
+Accede al directorio de configuraciones de implementación de Ansible con el siguiente comando:
+
+```bash
+cd install/onpremise/deploy/ansible
+```
