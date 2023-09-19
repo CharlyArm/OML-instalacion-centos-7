@@ -23,7 +23,36 @@ Instala las dependencias necesarias con el siguiente comando:
 yum install nano net-tools wget epel-release
 ```
 
-## Paso 3: Desactivar SELinux y el Firewall
+## Paso 3: Configurar SSH
+
+Abre el archivo de configuración de SSH para realizar modificaciones:
+
+```bash
+nano /etc/ssh/sshd_config
+```
+
+Dentro del archivo, busca las siguientes líneas y modifícalas según se indica a continuación:
+
+```bash
+PermitRootLogin yes
+PasswordAuthentication yes
+```
+
+Guarda los cambios y luego continúa con el Paso 3. Esto permitirá la autenticación de contraseña para el usuario root y habilitará el inicio de sesión como root a través de SSH. Asegúrate de reiniciar el servicio SSH después de realizar estos cambios:
+
+```bash
+systemctl restart sshd
+```
+
+## Paso 4: Cambiar la contraseña de Root
+
+Para cambiar la contraseña del usuario root, usa el siguiente comando y sigue las instrucciones:
+
+```bash
+passwd root
+```
+
+## Paso 5: Desactivar SELinux y el Firewall
 
 Desactiva SELinux temporalmente y el firewall con los siguientes comandos:
 
@@ -34,7 +63,7 @@ sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
 systemctl disable firewalld
 ```
 
-## Paso 4: Actualizar el Kernel y Git
+## Paso 6: Actualizar el Kernel y Git
 
 Asegúrate de que tu sistema tenga el kernel y Git actualizados para continuar con la instalación:
 
@@ -42,7 +71,7 @@ Asegúrate de que tu sistema tenga el kernel y Git actualizados para continuar c
 yum update -y && yum install kernel-devel git -y
 ```
 
-## Paso 5: Instalar Python y pip
+## Paso 7: Instalar Python y pip
 
 Instala Python 3 y pip3 en tu sistema:
 
@@ -51,7 +80,7 @@ yum install epel-release -y && yum install python3-pip python3 -y
 pip3 install --upgrade pip
 ```
 
-## Paso 6: Instalar Ansible
+## Paso 8: Instalar Ansible
 
 Instala Ansible en tu sistema con el siguiente comando:
 
@@ -60,7 +89,7 @@ pip3 install setuptools_rust
 pip3 install 'ansible==2.9.2' --user
 ```
 
-## Paso 7: Verificar el Kernel y las Dependencias
+## Paso 9: Verificar el Kernel y las Dependencias
 
 Antes de continuar, verifica la versión del kernel y la presencia de las dependencias necesarias con los siguientes comandos:
 
@@ -69,11 +98,10 @@ uname -r
 rpm -qa | grep kernel-devel
 ```
 
-## Paso 8: Instalar Completado Automático
+## Paso 10: Instalar Completado Automático
 
 Instala el completado automático de Bash con los siguientes comandos:
 
 ```bash
 yum install bash-completion bash-completion-extras -y
 ```
-
