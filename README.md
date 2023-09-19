@@ -68,3 +68,12 @@ Antes de continuar, verifica la versión del kernel y la presencia de las depend
 uname -r
 rpm -qa | grep kernel-devel
 ```
+
+## Paso 8: Instalar Completado Automático
+
+Instala el completado automático de Bash con los siguientes comandos:
+
+```bash
+yum install bash-completion bash-completion-extras -y
+```
+
