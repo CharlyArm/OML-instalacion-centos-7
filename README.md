@@ -59,3 +59,12 @@ Instala Ansible en tu sistema con el siguiente comando:
 pip3 install setuptools_rust
 pip3 install 'ansible==2.9.2' --user
 ```
+
+## Paso 7: Verificar el Kernel y las Dependencias
+
+Antes de continuar, verifica la versión del kernel y la presencia de las dependencias necesarias con los siguientes comandos:
+
+```bash
+uname -r
+rpm -qa | grep kernel-devel
+```
